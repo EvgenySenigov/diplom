@@ -36,70 +36,6 @@ class _ExpPageState extends State<ExpPage>
     super.dispose();
   }
 
-  List<Widget> _menuActions() {
-    return [
-      PopupMenuButton(
-          offset: const Offset(0, 50),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-          tooltip: "Показать меню",
-          onSelected: (result) {
-            switch (result) {
-              case 1:
-                {
-                  Navigator.pushNamed(context, 'exp/docs',
-                      arguments: 'assets/exp/symbols.pdf');
-                  break;
-                }
-              case 2:
-                {
-                  Navigator.pushNamed(context, 'exp/docs',
-                      arguments: 'assets/exp/description.pdf');
-                  break;
-                }
-            }
-          },
-          itemBuilder: (BuildContext context) => <PopupMenuEntry<Object>>[
-                const PopupMenuItem<Object>(
-                  value: 1,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.abc_outlined,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                      Expanded(
-                        child: Text(
-                          "Обозначения",
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                 const PopupMenuItem<Object>(
-                  value: 2,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.import_contacts,
-                        color: Colors.black,
-                      ),
-                      Expanded(
-                        child: Text("Указания по выполнению \nэксперимента",
-                            textAlign: TextAlign.center),
-                      )
-                    ],
-                  ),
-                ),
-              ])
-    ];
-  }
-
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -118,7 +54,6 @@ class _ExpPageState extends State<ExpPage>
           backgroundColor: const Color(0xffeae2d2),
           appBar: !hideAppBar
               ? AppBar(
-                  actions: _menuActions(),
                   title: Text(widget.title,
                       textScaleFactor:
                           0.7 * sqrt(screenSize.width) / sqrt(1000), //0.9,
