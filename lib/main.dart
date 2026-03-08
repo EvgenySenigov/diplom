@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:window_manager/window_manager.dart';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -44,7 +45,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (BuildContext context) => LoginPage(),
+        '/': (BuildContext context) => const LoginPage(),
 
         // Эксперимент
         '/exp': (BuildContext context) => const ExpPage(),
@@ -54,6 +55,7 @@ class App extends StatelessWidget {
       title: 'Виртуальный тренажер',
 
       theme: ThemeData(
+        textTheme: GoogleFonts.interTextTheme(),
         primarySwatch: Colors.amber,
       ),
     );
