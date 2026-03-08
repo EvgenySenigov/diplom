@@ -1,0 +1,10 @@
+^D:\ANDROID\STUDIOPROJECTS\VLABWARE_OET\BUILD\WINDOWS\CMAKEFILES\9D7B616461891DB126C48F5C1897BE89\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Android\StudioProjects\vlabware_oet\windows\flutter\ephemeral\.plugin_symlinks\syncfusion_pdfviewer_windows\windows\pdfviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Android\StudioProjects\vlabware_oet\windows\flutter\ephemeral\.plugin_symlinks\syncfusion_pdfviewer_windows\windows\syncfusion_pdfviewer_windows_plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Android\StudioProjects\vlabware_oet\windows\flutter\ephemeral\.plugin_symlinks\syncfusion_pdfviewer_windows\windows\pdfviewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Android\StudioProjects\vlabware_oet\windows\flutter\ephemeral\.plugin_symlinks\syncfusion_pdfviewer_windows\windows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{CB3F4EC6-FE4C-3485-9069-99C31ED2EA6F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6B63C676-2CFE-3768-B7ED-9148C673610A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

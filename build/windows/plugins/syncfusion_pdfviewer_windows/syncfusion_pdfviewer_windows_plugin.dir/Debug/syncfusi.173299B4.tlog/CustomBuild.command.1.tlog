@@ -1,0 +1,10 @@
+^D:\ANDROID\STUDIOPROJECTS\VLABWARE_OET\WINDOWS\FLUTTER\EPHEMERAL\.PLUGIN_SYMLINKS\SYNCFUSION_PDFVIEWER_WINDOWS\WINDOWS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Android/StudioProjects/vlabware_oet/windows -BD:/Android/StudioProjects/vlabware_oet/build/windows --check-stamp-file D:/Android/StudioProjects/vlabware_oet/build/windows/plugins/syncfusion_pdfviewer_windows/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

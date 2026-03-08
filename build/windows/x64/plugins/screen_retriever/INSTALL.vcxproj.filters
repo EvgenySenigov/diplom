@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Android\StudioProjects\vlabware_diplom\build\windows\x64\CMakeFiles\f3b1e4489d66e087ee117553d3ef99ba\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{4DF8E8F6-C305-3AEE-B6E3-F5DAE5E1DF65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
