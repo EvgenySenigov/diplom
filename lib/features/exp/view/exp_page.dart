@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:provider/provider.dart';
 import 'dart:math';
+import '../../../common/style.dart';
 import '../controller/exp_controller.dart';
 import 'exp_scheme.dart';
 
@@ -51,15 +52,15 @@ class _ExpPageState extends State<ExpPage>
     return ChangeNotifierProvider(
         create: (context) => ExpController(),
         child: Scaffold(
-          backgroundColor: const Color(0xffeae2d2),
+          backgroundColor: backColor,
           appBar: !hideAppBar
               ? AppBar(
                   title: Text(widget.title,
-                      textScaleFactor:
-                          0.7 * sqrt(screenSize.width) / sqrt(1000), //0.9,
                       softWrap: true,
                       maxLines: 3,
-                      textAlign: TextAlign.center),
+                      textAlign: TextAlign.center,
+                      ),
+            backgroundColor: Colors.grey.shade300,
                 )
               : null,
           body: SafeArea(

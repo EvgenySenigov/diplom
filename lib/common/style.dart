@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-Color backColor = const Color(0xfff5efe5);
+Color backColor = Colors.grey.shade300;
+Color schemeBackColor = const Color(0xfff5efe5);
 Color indColor = const Color(0xffdee4d5);
 Color indErrColor = const Color(0xfff3e3e3);
 Color setterColor = const Color(0xffeef1e9);

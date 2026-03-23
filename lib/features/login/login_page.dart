@@ -10,8 +10,8 @@ import '../../common/style.dart';
 String databaseHostName = "127.0.0.1";
 int databasePort = 5432;
 const String databaseName = "virtual_labs";
-const String databaseUserName = "postgres";
-const String databasePassword = "admin";
+const String databaseUserName = "app_user";
+const String databasePassword = "app_user_password_2026";
 
 class LoginPage extends StatelessWidget {
   const LoginPage({
@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
     bool hideDetailPanel = screenSize.shortestSide < 550;
 
     return Scaffold(
-      backgroundColor: backColor,
+      backgroundColor: schemeBackColor,
       body: Flex(
           direction: useVerticalLayout ? Axis.vertical : Axis.horizontal,
           children: [

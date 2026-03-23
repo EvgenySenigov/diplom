@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pdfrx/pdfrx.dart';
+import 'package:virtual_labs/common/style.dart';
 
 class DocScreen extends StatefulWidget {
   const DocScreen({
@@ -20,22 +21,25 @@ class _DocScreenState extends State<DocScreen> {
     final path = ModalRoute.of(context)!.settings.arguments as String;
 
     return Scaffold(
-      backgroundColor: const Color(0xffeae2d2),
+      backgroundColor: backColor,
       appBar: AppBar(
+        backgroundColor: backColor,
         actions: [
           IconButton(
+            iconSize: 36,
             icon: const Icon(
               Icons.zoom_in,
-              color: Colors.white,
+              color: Colors.black,
             ),
             onPressed: () {
               _pdfViewerController.setZoom(Offset.zero, _pdfViewerController.currentZoom*1.5);// zoomUp();
             },
           ),
           IconButton(
+            iconSize: 36,
             icon: const Icon(
               Icons.zoom_out,
-              color: Colors.white,
+              color: Colors.black,
             ),
             onPressed: () {
               _pdfViewerController.setZoom(Offset.zero, _pdfViewerController.currentZoom/1.5);
@@ -43,15 +47,14 @@ class _DocScreenState extends State<DocScreen> {
           ),
         ],
         title: Text(widget.title,
-            textScaleFactor: 0.9,
             softWrap: true,
             maxLines: 3,
             textAlign: TextAlign.center),
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          color: Color(0xfff1eada),
-          boxShadow: [
+        decoration: BoxDecoration(
+          color: backColor,
+          boxShadow: const [
             BoxShadow(
               color: Color(0x55000000),
               offset: Offset(0, 1),
@@ -63,7 +66,7 @@ class _DocScreenState extends State<DocScreen> {
               blurRadius: 2,
             ),
           ],
-          borderRadius: BorderRadius.all(
+          borderRadius: const BorderRadius.all(
             Radius.circular(2),
           ),
         ),

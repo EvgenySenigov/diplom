@@ -39,7 +39,7 @@ class Scheme extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: backColor, // Color(0xfff1eada),
+        color: schemeBackColor, // Color(0xfff1eada),
         boxShadow: const [
           BoxShadow(
             color: Color(0x55000000),
