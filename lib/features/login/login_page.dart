@@ -7,7 +7,7 @@ import 'package:unique_device_identifier/unique_device_identifier.dart';
 
 import '../../common/style.dart';
 
-String databaseHostName = "127.0.0.1";
+String databaseHostName = "178.216.98.199";
 int databasePort = 5432;
 const String databaseName = "virtual_labs";
 const String databaseUserName = "app_user";
@@ -136,6 +136,7 @@ class _LoginFormState extends State<_LoginForm> {
         if (results.isEmpty) {
           setState(() {
             comment = "Ключ продукта не верен.";
+            productKey = "";
           });
           await connection.close();
           return;

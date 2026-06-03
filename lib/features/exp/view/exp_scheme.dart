@@ -132,6 +132,13 @@ class Scheme extends StatelessWidget {
               Indicator(top: 395, left: 1535, height: 200, width: 300, value: calculateResult.I,  units: "А"),
             // Индикатор I3
               Indicator(top: 395, left: 2355, height: 200, width: 300, value: calculateResult.I,  units: "А"),
+              // Индикатор RTotal
+              Indicator(top: 1550, left: 1320, height: 200, width: 300, value: calculateResult.RTotal, units: "Ом"),
+              // Индикатор соблюдения баланса напряжений
+              IndicatorString(top: 1550, left: 1620+150, height: 200, width: 400, value: calculateResult.voltageBalanceStatus,
+              textColor: (calculateResult.voltageBalanceStatus != "Баланс: не применим") ?
+              (calculateResult.voltageBalanceStatus == "Баланс: нормальный") ? Colors.green :Colors.red
+                  : Colors.black,),
 
               // Задатчик сопротивления R1
               Setter(top: 620, left: 1130, width: 280, onChanged: onSetR1, value: calculateParams.R1, subLabel: "1"),
@@ -167,6 +174,8 @@ class Scheme extends StatelessWidget {
               const Label(top: 35, left: 1150+815, width: 300, label: "PV2"),
               const Label(top: 35, left: 1150+815+815, width: 300, label: "PV3"),
               const Label(top: 760, left: 360, width: 300, label: "PV4"),
+
+              const Label(top: 1505-30, left: 1422, width: 300, label: "R", subLabel: "общ",),
 
               const Label(top: 370, left: 550, width: 300, label: "Q1"),
 

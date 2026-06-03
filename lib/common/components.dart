@@ -53,7 +53,7 @@ class Indicator extends StatelessWidget
         child: Table(
             columnWidths: const {
               0: FlexColumnWidth(1),
-              1: FixedColumnWidth(80),
+              1: FixedColumnWidth(82),
             },
             children: [
               TableRow(children: [
@@ -70,6 +70,77 @@ class Indicator extends StatelessWidget
                   textAlign: TextAlign.left,
                   style: const TextStyle(color: Colors.black, fontSize: 52, fontWeight: FontWeight.w600),
                 )
+              ]),
+
+            ]),
+      ),
+    );
+  }
+}
+
+class IndicatorString extends StatelessWidget
+{
+  const IndicatorString({
+    Key? key,
+    required this.top,
+    required this.left,
+    required this.height,
+    required this.width,
+
+    required this.value,
+    this.textColor = Colors.black,
+  }) : super(key: key);
+
+  final double top;
+  final double left;
+  final double height;
+  final double width;
+
+  final String value;
+  final Color textColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: top,
+      left: left, //202,
+      height: height,
+      width: width,
+      child: Container(
+        decoration: BoxDecoration(
+          color: indColor,
+          //: indErrColor,
+          border: Border.all(
+            width: 2,
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x55000000),
+              offset: Offset(0, 10),
+              blurRadius: 15,
+            ),
+          ],
+          borderRadius: const BorderRadius.all(
+            Radius.circular(50),
+          ),
+        ),
+        padding: const EdgeInsets.only(left: 15, right: 15),
+        alignment: Alignment.center,
+        child: Table(
+            columnWidths: const {
+              0: FlexColumnWidth(1),
+              1: FixedColumnWidth(80),
+            },
+            children: [
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 0),
+                  child: Text(
+                    value,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: textColor, fontSize: 52, fontWeight: FontWeight.w600),
+                  ),
+                ),
               ]),
 
             ]),

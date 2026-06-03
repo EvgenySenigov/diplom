@@ -13,7 +13,6 @@ Color descButtonColor = const Color(0xff823d61);
 Color settingsButtonColor = const Color(0xff78747a);
 Color errorColor = const Color(0xffa12b2b);
 
-
 final ButtonStyle descBtnStyle = ElevatedButton.styleFrom(
   foregroundColor: Colors.white, backgroundColor: descButtonColor, textStyle: const TextStyle(
     //     fontSize: 17.sp,

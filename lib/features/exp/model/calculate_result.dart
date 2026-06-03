@@ -6,6 +6,8 @@ class CalculateResult {
   U1,
   U2,
   U3;
+  double RTotal;          // суммарное сопротивление цепи
+  String voltageBalanceStatus;
   // конструктор
   CalculateResult(
       [
@@ -14,5 +16,7 @@ class CalculateResult {
             this.U1=0,
             this.U2=0,
             this.U3=0,
+            this.RTotal = 0,
+            this.voltageBalanceStatus = "Баланс: не применим",
         ]);
 }
